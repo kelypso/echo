@@ -6,10 +6,6 @@ import './App.css'
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.getCurrentUser()
-  }
-
   render() {
     return (
       <div className="App">
@@ -18,3 +14,5 @@ class App extends React.Component {
     )
   }
 }
+
+export default App

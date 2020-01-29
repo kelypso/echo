@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'database_cleaner'
+DatabaseCleaner.clean_with(:truncation)
+
+roamer = User.create!(name: "Conrad", email: "roamer@email.com", username: "roamer", password: "roamer")
+scout = User.create!(name: "Lacey", email: "scout@email.com", username: "scout", password: "scout")
+

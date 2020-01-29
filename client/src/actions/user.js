@@ -1,4 +1,4 @@
-import {resetLoginForm} from './loginForm'
+import {resetLoginForm} from './login'
 //import {resetSignupForm} from './signupForm'
 //import {getUserFlights, clearFlights} from './flights'
 

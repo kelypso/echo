@@ -1,8 +1,8 @@
-import {resetLoginForm} from './login'
+//import {resetLoginForm} from './login'
 //import {resetSignupForm} from './signupForm'
 //import {getUserFlights, clearFlights} from './flights'
 
-// Synchronous action creators 
+// Synchronous action creators (returns js obj)
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -16,7 +16,7 @@ export const clearCurrentUser = () => {
   }
 }
 
-// Asynch action creators
+// Asynch action creators (returns dispatch fn to fetch from api)
 const api_url = "http://localhost:3001/api/v1"
 
 export const login = (credentials, history)=> {

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {login} from '../actions/user'
-//import {updateLoginForm} from '../actions/loginForm'
+import {updateLoginForm} from '../actions/login'
 
 const Login = ({loginData, updateLoginForm, login, history}) => {
     const {username, password} = loginData

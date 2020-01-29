@@ -17,9 +17,11 @@ export const clearCurrentUser = () => {
 }
 
 // Asynch action creators
+const api_url = "http://localhost:3001/api/v1"
+
 export const login = (credentials, history)=> {
     return dispatch => {
-      return fetch("http://localhost:3001/api/v1/login", {
+      return fetch(`${api_url}/login`, {
         credentials: "include",
         method: "POST",
         headers: {
@@ -47,7 +49,7 @@ export const signup = (credentials, history) => {
       const userData = {
         user: credentials
       }
-      return fetch("http://localhost:3001/api/v1/signup", {
+      return fetch(`${api_url}/signup`, {
         credentials: "include",
         method: "POST",
         headers: {
@@ -74,7 +76,7 @@ export const logout = () => {
     return dispatch => {
       dispatch(clearCurrentUser())
       //dispatch(clearFlights())
-      return fetch("http://localhost:3001/api/v1/logout", {
+      return fetch(`${api_url}/logout`, {
         credentials: "include",
         method: "DELETE"
       })
@@ -83,7 +85,7 @@ export const logout = () => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-      return fetch("http://localhost:3001/api/v1/get_current_user", {
+      return fetch(`${api_url}/get_current_user`, {
         credentials: "include",
         method: "GET",
         headers: {

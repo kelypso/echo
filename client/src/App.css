@@ -14,8 +14,8 @@
 }
 
 .app-background {
-  background-image: url('./images/home-bg.jpg');
-  background-size: auto;
+  background-image: url('./images/home-background.jpg');
+  background-size: cover;
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5c6809d;
+  background: #63636349;
 }
 
 .NavBar a {
@@ -49,31 +49,32 @@
 }
 
 .nav-link:hover, .selected-tab {
-  background-color: #f3ba664f;
+  background-color: #ffffff;
+  opacity: 0.8;
   border-radius: 15px;
 }
 
 .link-title {
-  color: #130f0db0;
+  color: #636363;
 }
 
 /* HOME */
 .home-greeting {
   font-weight: bold;
-  border: solid #130f0db0;
+  border: solid #636363;
   border-width: 3px;
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-top: 6%;
   padding: 12px;
-  background-color: #f5c6800e;
+  background-color: #ffffff;
   opacity: 0.8;
-  color: #130f0db0;
+  color: #636363;
 }
 
 .tagline {
-  color: #130f0db0;
+  color: #636363;
   font-style: italic;
 }
 
@@ -112,29 +113,29 @@
 .account-greeting {
   font-size: 21px;
   font-weight: bold;
-  border: solid #130f0db0;
+  border: solid #636363;
   border-width: 3px;
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-top: 4%;
   padding: 5px 15px 5px 15px;
-  background-color: #f5c6800e;
+  background-color: #ffffff;
   opacity: 0.8;
-  color: #130f0db0;
+  color: #636363;
 }
 
 .account-form {
   font-size: 16px;
   height: 10px;
   width: 200px;
-  border: solid #130f0d93;
+  border: solid #636363;
   border-width: 3px;
   border-radius: 3px;
   display: inline-block;
   padding: 10px;
   vertical-align: middle;
-  background-color: #f5c6800e;
-  opacity: 0.8;
-  color: #130f0db0;
+  background-color: #ffffff;
+  opacity: 0.7;
+  color: #636363;
 }

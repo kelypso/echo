@@ -92,7 +92,6 @@
   background-color: white;
   opacity: 0.8;
 }
-
 .book-list-item {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -100,11 +99,9 @@
   display: inline-block;
   list-style-type: none;
 }
-
 .google-search {
   padding: 4px;
 }
-
 .LibraryList {
   padding-bottom: 1px;
 } */
@@ -118,7 +115,7 @@
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 4%;
+  margin-top: 3%;
   padding: 5px 15px 5px 15px;
   background-color: #ffffff;
   opacity: 0.8;

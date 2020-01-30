@@ -30,69 +30,53 @@
   opacity: 0.8;
 }
 
-/* //////////////////////NAVBAR////////////////////// */
-
-.Navbar {
+/* NAV */
+.NavBar {
   overflow: hidden;
   padding: 3px;
-  height: 18px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #9790909d;
 }
 
-.Navbar a {
+.NavBar a {
   text-align: center;
   text-decoration: none;
-  margin: 40px;
+  margin: 50px;
   padding: 6px;
 }
 
 .nav-link:hover, .selected-tab {
   background-color: #D3D3D3;
+  border-radius: 15px;
 }
 
-.app-title {
-  color: black;
-  font-size: 22px;
-  font-family: 'Heebo', sans-serif;
+.link-title {
+  color: #636363;
 }
 
-.tab-title {
-  color: black;
-  font-size: 16px;
-  font-family: 'Heebo', sans-serif;
-}
-
-/* ///////////////////HOME/////////////////// */
-
+/* HOME */
 .home-greeting {
-  border: solid black;
+  border: solid #636363;
   border-width: 3px;
+  border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 21%;
+  margin-top: 7%;
   padding: 12px;
   background-color: white;
   opacity: 0.8;
+  color: #636363;
 }
 
-/* ///////////////////ABOUT/////////////////// */
-
-.about-paragraph {
-  border: solid black;
-  border-width: 3px;
-  display: inline-block;
-  width: 700px;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: middle;
-  background-color: white;
-  opacity: 0.8;
+.tagline {
+  color: #636363;
+  font-style: italic;
 }
 
 /* ///////////////////BOOKS/////////////////// */
-
 .book-list {
   border: solid black;
   border-width: 3px;
@@ -123,8 +107,7 @@
   padding-bottom: 1px;
 }
 
-/* ///////////////////ACCOUNT/////////////////// */
-
+/* ACCOUNT */
 .account-title {
   border: solid black;
   border-width: 3px;

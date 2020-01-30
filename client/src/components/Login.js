@@ -27,6 +27,7 @@ class Login extends Component {
   render() {
     return (
         <form onSubmit={this.handleSubmit}>
+            <br/><br/><br/>
             <input type="text" name="username" onChange={this.handleChange} value={this.state.username} placeholder="username" className="formInput" /><br/><br/>
             <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="password" className="formInput" /><br />
             <br/><input type="submit" value="Log In" className="formBtn" />

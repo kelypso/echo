@@ -11,10 +11,10 @@ class NavBar extends Component {
       userNav = (
         <>
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
-            <span className="tab-title">Logbook</span>
+            <span className="link-title">Logbook</span>
           </NavLink>
           <NavLink to="/logout" className="nav-link" activeClassName="selected-tab">
-            <span className="tab-title">Logout</span>
+            <span className="link-title">Logout</span>
           </NavLink>
         </>
       )
@@ -22,10 +22,10 @@ class NavBar extends Component {
       userNav = (
         <>
           <NavLink to="/signup" className="nav-link" activeClassName="selected-tab">
-            <span className="tab-title">Sign Up</span>
+            <span className="link-title">Sign Up</span>
           </NavLink>
           <NavLink to="/login" className="nav-link" activeClassName="selected-tab">
-            <span className="tab-title">Log In</span>
+            <span className="link-title">Log In</span>
           </NavLink>
         </>
       )
@@ -33,14 +33,8 @@ class NavBar extends Component {
 
     return(
       <div className="NavBar">
-        <NavLink to="/search" className="nav-link" activeClassName="selected-tab">
-          <span className="tab-title">Search</span>
-        </NavLink>
-        <NavLink to="/about" className="nav-link" activeClassName="selected-tab">
-          <span className="tab-title">About</span>
-        </NavLink>
         <NavLink exact to="/" className="nav-link" activeClassName="selected-tab">
-          <span className="app-title">ECHO</span>
+          <span className="link-title">Home</span>
         </NavLink>
         {userNav}
       </div>

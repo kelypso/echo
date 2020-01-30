@@ -13,7 +13,8 @@ const Login = ({loginData, updateLoginForm, login, history}) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        login(loginData, history)
+        login(loginData)
+        history.push("/")
     }
 
     return (

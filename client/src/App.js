@@ -6,7 +6,7 @@ import {logout, getCurrentUser} from './actions/userActions.js'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
-// import SignUp from './containers/Account/SignUp'
+import Signup from './components/Signup'
 // import About from './components/About'
 // import Books from './components/Books'
 // import Library from './components/Library'
@@ -22,23 +22,20 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <NavBar user={this.props.user}/>
-          <div className="app-background">
-            <Switch>
-              <Route exact path='/' component={Home} />
-              {/* <Route exact path='/search' component={Books} />
-              <Route exact path='/about' component={About} />
-              <Route exact path='/signup' component={SignUp} /> */}
-              <Route exact path='/login' component={Login} />
-              <Route path='/logout' render={props => {
-                  this.props.logout()
-                  return <Redirect to='/' />
-                }}
-              />
-              {/* <Route exact path='/:username'
-                render={({match}) => <Library user={this.props.user} match={match} />}
-              /> */}
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/signup' component={Signup} />
+            <Route path='/logout' render={props => {
+                this.props.logout()
+                return <Redirect to='/' />
+              }}
+            />
+            {/* <Route exact path='/search' component={Books} /> */}
+            {/* <Route exact path='/:username'
+              render={({match}) => <Library user={this.props.user} match={match} />}
+            /> */}
+          </Switch>
         </Router>
       </div>
     )

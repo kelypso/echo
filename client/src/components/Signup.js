@@ -28,45 +28,16 @@ class SignUp extends Component {
 
     render() {
         return(
-            <div className="SignUp">
-            <h2 className="account-greeting">Sign Up</h2><br/>
-            <br/>
-            <div className="account-form">
             <form onSubmit={this.handleSubmit}>
-                <input type="text" name="name" placeholder="name" value={this.state.firstname} onChange={this.handleChange}>
-            </input>
-            <br></br>
-            <input
-              type="text"
-              name="lastname"
-              placeholder="Last Name"
-              value={this.state.lastname}
-              onChange={this.handleChange}>
-            </input>
-            <br></br>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={this.state.username}
-              onChange={this.handleChange}>
-            </input>
-            <br></br>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.handleChange}>
-            </input>
-            <br></br>
-            <input value="Sign Up" type="submit"/>
-          </form>
-        </div>
-      </div>
+                <h2 className="account-greeting">Sign Up</h2><br/>
+                    <input type="text" name="name" onChange={this.handleChange} value={this.state.name} placeholder="name" className="account-form" /><br/><br/>
+                    <input type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="email" className="account-form" /><br/><br/>
+                    <input type="text" name="username" onChange={this.handleChange} value={this.state.username} placeholder="username" className="account-form" /><br/><br/>
+                    <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="password" className="account-form" /><br/>
+                <br/><input type="submit" value="Sign Up" className="form-button" />
+            </form>
     )
   }
-
 }
 
 export default connect(null, {signup})(SignUp);

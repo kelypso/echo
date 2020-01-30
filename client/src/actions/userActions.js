@@ -1,7 +1,3 @@
-//import {resetLoginForm} from './login'
-//import {resetSignupForm} from './signupForm'
-//import {getUserFlights, clearFlights} from './flights'
-
 // Synchronous action creators (returns js obj)
 export const setCurrentUser = user => {
     return {

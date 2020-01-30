@@ -6,7 +6,7 @@ import {logout, getCurrentUser} from './actions/userActions.js'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
-// import Signup from './components/Signup'
+import Signup from './components/Signup'
 // import Logbook from './components/Logbook'
 
 class App extends React.Component {
@@ -24,8 +24,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/login' component={Login} />
-            {/* <Route exact path='/signup' component={Signup} />
-            <Route path='/logout' render={props => {
+            <Route exact path='/signup' component={Signup} />
+            {/* <Route path='/logout' render={props => {
                 this.props.logout()
                 return <Redirect to='/' />
               }}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {NavLink} from "react-router-dom"
 import Logout from './Logout'
-import Logbook from './Logbook'
+import FlightLog from './FlightLog'
 
 class NavBar extends Component {
 

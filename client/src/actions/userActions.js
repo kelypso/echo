@@ -1,5 +1,5 @@
 import {resetLoginForm} from './loginActions.js'
-// import {resetSignupForm} from './signupActions.js'
+import {resetSignupForm} from './signupActions.js'
 // import {getUserFlights, clearFlights} from './flights.js'
 
 // Synchronous action creators (returns js obj)
@@ -55,7 +55,7 @@ export const logout = () => {
 export const signup = user => {
   return dispatch => {
     const userData = {
-      user //can I deconstruct here? Can I just use user in body? TEST!
+      user
     }
     return fetch(`${api_url}/signup`, {
       credentials: "include",
@@ -70,7 +70,7 @@ export const signup = user => {
         } else {
           dispatch(setCurrentUser(resp.data))
           //dispatch(getUserFlights())
-          //dispatch(resetSignupForm())
+          dispatch(resetSignupForm())
         }
       })
       .catch(error => {return error})

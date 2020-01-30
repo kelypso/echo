@@ -1,18 +1,20 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {NavLink, withRouter} from 'react-router-dom'
 import {logout} from '../actions/userActions'
-import {withRouter} from 'react-router-dom'
 
 const Logout = ({logout, history}) => {
+
+    const handleClick = e => {
+        e.preventDefault()
+        logout()
+        history.push("/")
+    }
+
     return (
-        <form onSubmit={e => {
-            e.preventDefault()
-            logout()
-            history.push("/")
-            }
-        }>
-           <input type="submit" value="Logout" className="formBtn logout" />
-        </form>
+        <NavLink onClick={handleClick} to="/" className="nav-link">
+            <span className="link-title">Logout</span>
+        </NavLink>
     )
 }
 

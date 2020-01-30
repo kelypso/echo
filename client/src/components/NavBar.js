@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {NavLink} from "react-router-dom";
+import React, {Component} from 'react'
+import {NavLink} from "react-router-dom"
+import Logout from './Logout'
 
 class NavBar extends Component {
 
@@ -13,9 +14,7 @@ class NavBar extends Component {
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Log New Flight</span>
           </NavLink>
-          <NavLink to="/logout" className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Logout</span>
-          </NavLink>
+          <Logout />
         </>
       )
     } else {

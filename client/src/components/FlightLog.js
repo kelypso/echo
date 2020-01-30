@@ -1,16 +1,18 @@
-import React, {Component} from 'react'
-import FlightCard from './FlightCard.js'
+import React from 'react'
+import {connect} from 'react-redux'
+import Flight from './Flight'
 
-class FlightLog extends Component {
-
-  render() {
-    const flights = this.props.flights
-    const flightCards = flights.length > 0 ? flights.map(f => <FlightCard flight={f} key={f.id} />) : null
-
+const FlightLog = ({flights}) => {
+    const flightLog = flights.length > 0 ? flights.map(f => <Flight flight={f} key={f.id} />) : null
     return (
-      flightCards
+        flightLog
     )
-  }
 }
 
-export default (FlightLog)
+const mapStateToProps = ({flights}) => {
+    return {
+      flights
+    }
+}
+
+export default connect(mapStateToProps)(FlightLog)

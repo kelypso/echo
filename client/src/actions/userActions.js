@@ -1,6 +1,6 @@
 import {resetLoginForm} from './loginActions.js'
 import {resetSignupForm} from './signupActions.js'
-// import {getUserFlights, clearFlights} from './flights.js'
+import {getUserFlights, clearFlights} from './flightActions'
 
 // Synchronous action creators (returns js obj)
 export const setCurrentUser = user => {
@@ -33,7 +33,7 @@ export const login = user => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          //dispatch(getUserFlights())
+          dispatch(getUserFlights())
           dispatch(resetLoginForm())
         }
       })
@@ -44,7 +44,7 @@ export const login = user => {
 export const logout = () => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    //dispatch(clearFlights())
+    dispatch(clearFlights())
     return fetch(`${api_url}/logout`, {
       credentials: "include",
       method: "DELETE"
@@ -69,7 +69,7 @@ export const signup = user => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          //dispatch(getUserFlights())
+          dispatch(getUserFlights())
           dispatch(resetSignupForm())
         }
       })
@@ -90,7 +90,7 @@ export const getCurrentUser = () => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          //dispatch(getUserFlights())
+          dispatch(getUserFlights())
         }
       })
       .catch(error => {return error})

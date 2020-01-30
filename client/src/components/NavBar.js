@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {NavLink} from "react-router-dom"
 import Logout from './Logout'
+import Logbook from './Logbook'
 
 class NavBar extends Component {
 
@@ -11,6 +12,7 @@ class NavBar extends Component {
     if (user !== null && user.id) {
       userNav = (
         <>
+          <Logbook />
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Log New Flight</span>
           </NavLink>
@@ -20,6 +22,9 @@ class NavBar extends Component {
     } else {
       userNav = (
         <>
+          <NavLink exact to="/" className="nav-link" activeClassName="selected-tab">
+            <span className="link-title">Home</span>
+          </NavLink>
           <NavLink to="/signup" className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Sign Up</span>
           </NavLink>
@@ -32,9 +37,6 @@ class NavBar extends Component {
 
     return(
       <div className="NavBar">
-        <NavLink exact to="/" className="nav-link" activeClassName="selected-tab">
-          <span className="link-title">Home</span>
-        </NavLink>
         {userNav}
       </div>
     )

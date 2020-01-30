@@ -1,3 +1,7 @@
+import {resetLoginForm} from './loginActions.js'
+// import {resetSignupForm} from './signupActions.js'
+// import {getUserFlights, clearFlights} from './flights.js'
+
 // Synchronous action creators (returns js obj)
 export const setCurrentUser = user => {
   return {
@@ -30,7 +34,7 @@ export const login = user => {
         } else {
           dispatch(setCurrentUser(resp.data))
           //dispatch(getUserFlights())
-          //dispatch(resetLoginForm())
+          dispatch(resetLoginForm())
         }
       })
       .catch(error => {return error})

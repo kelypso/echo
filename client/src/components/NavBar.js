@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {NavLink} from "react-router-dom"
 import Logout from './Logout'
-import FlightLog from './FlightLog'
 
 class NavBar extends Component {
 
@@ -12,7 +11,9 @@ class NavBar extends Component {
     if (user !== null && user.id) {
       userNav = (
         <>
-          <FlightLog />
+          <NavLink to={"/flights"} className="nav-link" activeClassName="selected-tab">
+            <span className="link-title">Logbook</span>
+          </NavLink>
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Log New Flight</span>
           </NavLink>

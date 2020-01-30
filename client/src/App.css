@@ -13,14 +13,14 @@
   color: white;
 }
 
-.app-background {
-  /* background-image: url('./images/home-background.jpeg'); */
+/* .app-background {
+  background-image: url('./images/home-background.jpeg');
   background-repeat: repeat-y;
   min-width: 100vw;
   min-height: 100vh;
-}
+} */
 
-.route-title {
+/* .route-title {
   border: solid black;
   border-width: 3px;
   display: inline-block;
@@ -28,7 +28,7 @@
   padding: 8px;
   background-color: white;
   opacity: 0.8;
-}
+} */
 
 /* NAV */
 .NavBar {
@@ -77,7 +77,7 @@
 }
 
 /* ///////////////////BOOKS/////////////////// */
-.book-list {
+/* .book-list {
   border: solid black;
   border-width: 3px;
   display: inline-block;
@@ -105,26 +105,34 @@
 
 .LibraryList {
   padding-bottom: 1px;
-}
+} */
 
 /* ACCOUNT */
-.account-title {
-  border: solid black;
+.account-greeting {
+  font-size: 21px;
+  border: solid #636363;
   border-width: 3px;
+  border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 15%;
-  padding: 8px;
+  margin-top: 5%;
+  padding: 5px 15px 5px 15px;
   background-color: white;
   opacity: 0.8;
+  color: #636363;
 }
 
 .account-form {
-  border: solid black;
+  font-size: 16px;
+  height: 10px;
+  width: 200px;
+  border: solid #c0bebe;
   border-width: 3px;
+  border-radius: 3px;
   display: inline-block;
   padding: 10px;
   vertical-align: middle;
   background-color: white;
   opacity: 0.8;
+  color: #636363;
 }

@@ -41,6 +41,17 @@ export const login = user=> {
   }
 }
 
+export const logout = () => {
+  return dispatch => {
+    dispatch(clearCurrentUser())
+    //dispatch(clearFlights())
+    return fetch(`${api_url}/logout`, {
+      credentials: "include",
+      method: "DELETE"
+    })
+  }
+}
+
 export const signup = (user, history) => {
     return dispatch => {
       const userData = {
@@ -64,17 +75,6 @@ export const signup = (user, history) => {
             }
         })
         .catch(error => {return error})
-    }
-  }
-
-export const logout = () => {
-    return dispatch => {
-      dispatch(clearCurrentUser())
-      //dispatch(clearFlights())
-      return fetch(`${api_url}/logout`, {
-        credentials: "include",
-        method: "DELETE"
-      })
     }
   }
 

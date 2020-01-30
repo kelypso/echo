@@ -29,9 +29,9 @@ class App extends React.Component {
                 return <Redirect to='/' />
               }}
             />
-            <Route exact path='/:username'
+            {/* <Route exact path='/:username'
               render={({match}) => <Logbook user={this.props.user} match={match} />}
-            />
+            /> */}
             {/* <Route exact path='/search' component={Books} /> */}
           </Switch>
         </Router>

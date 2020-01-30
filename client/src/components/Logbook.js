@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import Flights from './Flights'
+import FlightLog from './FlightLog'
 import {findUser} from '../actions/userActions'
 
 class Logbook extends Component {
@@ -10,15 +10,16 @@ class Logbook extends Component {
   }
 
   render(){
-    const user = this.props.user
+    const user = this.props.user.attributes
 
     return(
       <div className="Logbook">
-        <h2 className="account-greeting">{user.name}'s Logbook</h2>
+          {console.log(this.props.user.attributes)}
+        {/* <h2 className="account-greeting">{user.name}'s Logbook</h2>
         <br></br>
-        <div className="flight-list">
-          <Flights flights={user.flights} />
-        </div>
+        <div className="flight-log">
+          <FlightLog flights={user.flights} />
+        </div> */}
       </div>
     )
   }

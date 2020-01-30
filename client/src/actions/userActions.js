@@ -30,10 +30,9 @@ export const login = user => {
         } else {
           dispatch(setCurrentUser(resp.data))
           //dispatch(getUserFlights())
-          //dispatch(resetLoginForm()) is this needed with local state?
         }
       })
-        .catch(error => {return error})
+      .catch(error => {return error})
   }
 }
 
@@ -66,8 +65,6 @@ export const signup = (user, history) => {
             } else {
                 dispatch(setCurrentUser(resp.data))
                 //dispatch(getUserFlights())
-                //dispatch(resetSignupForm())
-                history.push("/")
             }
         })
         .catch(error => {return error})

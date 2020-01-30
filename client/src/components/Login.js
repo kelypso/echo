@@ -34,7 +34,6 @@ class Login extends Component {
             </form>
         )
     }
-
 }
 
 export default connect(null, {login})(Login);

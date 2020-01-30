@@ -1,9 +1,9 @@
 // Synchronous action creators (returns js obj)
 export const setCurrentUser = user => {
-    return {
-        type: "SET_CURRENT_USER",
-        user
-    }
+  return {
+    type: "SET_CURRENT_USER",
+    user
+  }
 }
 
 export const clearCurrentUser = () => {
@@ -15,7 +15,7 @@ export const clearCurrentUser = () => {
 // Asynch action creators (returns dispatch fn to fetch from api)
 const api_url = "http://localhost:3001/api/v1"
 
-export const login = user=> {
+export const login = user => {
   return dispatch => {
     return fetch(`${api_url}/login`, {
       credentials: "include",

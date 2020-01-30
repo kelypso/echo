@@ -22,7 +22,7 @@ const Login = ({loginData, updateLoginForm, login, history}) => {
             <h2 className="account-greeting">Log In</h2><br/>
             <input type="text" name="username" onChange={handleChange} value={username} placeholder="username" className="account-form" /><br/><br/>
             <input type="password" name="password" onChange={handleChange} value={password} placeholder="password" className="account-form" /><br/>
-            <br/><input type="submit" value="Log In" className="form-btn" />
+            <br/><input type="submit" value="Log In" className="form-button" />
         </form>
     )
 }

@@ -19,56 +19,52 @@ export const clearCurrentUser = () => {
 // Asynch action creators (returns dispatch fn to fetch from api)
 const api_url = "http://localhost:3001/api/v1"
 
-export const login = (credentials, history)=> {
+export const login = (user, history)=> {
     return dispatch => {
       return fetch(`${api_url}/login`, {
         credentials: "include",
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(credentials)
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(user)
       })
         .then(resp => resp.json())
-        .then(response => {
-            if (response.error) {
-                alert(response.error)
+        .then(resp => {
+            if (resp.error) {
+                alert(resp.error)
             } else {
-                dispatch(setCurrentUser(response.data))
+                dispatch(setCurrentUser(resp.data))
                 //dispatch(getUserFlights())
                 //dispatch(resetLoginForm())
                 history.push("/flights")
             }
         })
-        .catch(console.log)
+        .catch(error => {return error})
     }
 }
 
-export const signup = (credentials, history) => {
+export const signup = (user, history) => {
     return dispatch => {
       const userData = {
-        user: credentials
+        user //can I deconstruct here? Can I just use user in body? TEST!
       }
       return fetch(`${api_url}/signup`, {
         credentials: "include",
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(userData)
       })
         .then(resp => resp.json())
-        .then(response => {
-            if (response.error) {
-                alert(response.error)
+        .then(resp => {
+            if (resp.error) {
+                alert(resp.error)
             } else {
-                dispatch(setCurrentUser(response.data))
+                dispatch(setCurrentUser(resp.data))
                 //dispatch(getUserFlights())
                 //dispatch(resetSignupForm())
                 history.push("/")
             }
         })
-        .catch(console.log)
+        .catch(error => {return error})
     }
   }
 
@@ -83,21 +79,32 @@ export const logout = () => {
     }
   }
 
+export const findUser = (user) => {
+  return dispatch => {
+    return fetch(`${API_URL}/${user}`, {
+      method: "GET",
+      credentials: "include",
+      headers: {"Content-Type": "application/json"}
+    })
+      .then(resp => resp.json())
+      .then(resp => console.log(resp))
+      .catch(error => {return error})
+  }
+}
+
 export const getCurrentUser = () => {
     return dispatch => {
-      return fetch(`${api_url}/get_current_user`, {
+      return fetch(`${api_url}/find_user`, {
         credentials: "include",
         method: "GET",
-        headers: {
-          "Content-Type": "application/json"
-        }
+        headers: {"Content-Type": "application/json"}
       })
         .then(resp => resp.json())
-        .then(response => {
-            if (response.error) {
-                alert(response.error)
+        .then(resp => {
+            if (resp.error) {
+                alert(resp.error)
             } else {
-                dispatch(setCurrentUser(response.data))
+                dispatch(setCurrentUser(resp.data))
                 //dispatch(getUserFlights())
             }
         })

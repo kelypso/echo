@@ -12,7 +12,7 @@ class NavBar extends Component {
     if (user !== null && user.id) {
       userNav = (
         <>
-          <Logbook />
+          <FlightLog />
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Log New Flight</span>
           </NavLink>

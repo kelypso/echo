@@ -71,18 +71,18 @@ export const signup = (user, history) => {
     }
   }
 
-// export const findUser = (user) => {
-//   return dispatch => {
-//     return fetch(`${api_url}/${user}`, {
-//       method: "GET",
-//       credentials: "include",
-//       headers: {"Content-Type": "application/json"}
-//     })
-//       .then(resp => resp.json())
-//       .then(resp => console.log(resp))
-//       .catch(error => {return error})
-//   }
-// }
+export const findUser = (user) => {
+  return dispatch => {
+    return fetch(`${api_url}/${user}`, {
+      method: "GET",
+      credentials: "include",
+      headers: {"Content-Type": "application/json"}
+    })
+      .then(resp => resp.json())
+      .then(resp => console.log(resp))
+      .catch(error => {return error})
+  }
+}
 
 export const getCurrentUser = () => {
     return dispatch => {

@@ -13,12 +13,12 @@
   color: white;
 }
 
-/* .app-background {
-  background-image: url('./images/home-background.jpeg');
-  background-repeat: repeat-y;
+.app-background {
+  background-image: url('./images/home-bg.jpg');
+  background-size: auto;
   min-width: 100vw;
   min-height: 100vh;
-} */
+}
 
 /* .route-title {
   border: solid black;
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #9790909d;
+  background: #f5c6809d;
 }
 
 .NavBar a {
@@ -49,31 +49,31 @@
 }
 
 .nav-link:hover, .selected-tab {
-  background-color: #D3D3D3;
+  background-color: #f3ba664f;
   border-radius: 15px;
 }
 
 .link-title {
-  color: #636363;
+  color: #130f0db0;
 }
 
 /* HOME */
 .home-greeting {
   font-weight: bold;
-  border: solid #636363;
+  border: solid #130f0db0;
   border-width: 3px;
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 7%;
+  margin-top: 6%;
   padding: 12px;
-  background-color: white;
+  background-color: #f5c6800e;
   opacity: 0.8;
-  color: #636363;
+  color: #130f0db0;
 }
 
 .tagline {
-  color: #636363;
+  color: #130f0db0;
   font-style: italic;
 }
 
@@ -112,29 +112,29 @@
 .account-greeting {
   font-size: 21px;
   font-weight: bold;
-  border: solid #636363;
+  border: solid #130f0db0;
   border-width: 3px;
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 5%;
+  margin-top: 4%;
   padding: 5px 15px 5px 15px;
-  background-color: white;
+  background-color: #f5c6800e;
   opacity: 0.8;
-  color: #636363;
+  color: #130f0db0;
 }
 
 .account-form {
   font-size: 16px;
   height: 10px;
   width: 200px;
-  border: solid #c0bebe;
+  border: solid #130f0d93;
   border-width: 3px;
   border-radius: 3px;
   display: inline-block;
   padding: 10px;
   vertical-align: middle;
-  background-color: white;
+  background-color: #f5c6800e;
   opacity: 0.8;
-  color: #636363;
+  color: #130f0db0;
 }

@@ -5,7 +5,7 @@ import {findUser} from '../actions/userActions'
 
 class Logbook extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.findUser(this.props.match.params.username)
   }
 

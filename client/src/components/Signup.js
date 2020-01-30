@@ -5,7 +5,7 @@ import {signup} from '../actions/userActions'
 class SignUp extends Component {
 
     constructor() {
-        super();
+        super()
         this.state = {
             name: "",
             email: "",

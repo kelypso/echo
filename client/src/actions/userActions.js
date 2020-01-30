@@ -52,7 +52,7 @@ export const logout = () => {
   }
 }
 
-export const signup = (user, history) => {
+export const signup = user => {
   return dispatch => {
     const userData = {
       user //can I deconstruct here? Can I just use user in body? TEST!

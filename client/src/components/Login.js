@@ -21,13 +21,13 @@ class Login extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.login(this.state);
-        this.props.history.push('/');
+        this.props.history.push(`/${this.state.username}`);
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h2 className="account-greeting"><strong>Log In</strong></h2><br/>
+                <h2 className="account-greeting">Log In</h2><br/>
                 <input type="text" name="username" onChange={this.handleChange} value={this.state.username} placeholder="username" className="account-form" /><br/><br/>
                 <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="password" className="account-form" /><br />
                 <br/><input type="submit" value="Log In" className="form-btn" />

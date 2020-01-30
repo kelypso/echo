@@ -11,7 +11,7 @@ class NavBar extends Component {
       userNav = (
         <>
           <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Logbook</span>
+            <span className="link-title">Log New Flight</span>
           </NavLink>
           <NavLink to="/logout" className="nav-link" activeClassName="selected-tab">
             <span className="link-title">Logout</span>

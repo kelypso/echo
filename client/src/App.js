@@ -7,15 +7,13 @@ import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Signup from './components/Signup'
-// import About from './components/About'
-// import Books from './components/Books'
-// import Library from './components/Library'
+import Logbook from './components/Logbook'
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.getCurrentUser()
-  }
+  // componentDidMount() {
+  //   this.props.getCurrentUser()
+  // }
 
   render(){
     return (
@@ -31,10 +29,10 @@ class App extends React.Component {
                 return <Redirect to='/' />
               }}
             />
+            <Route exact path='/:username'
+              render={({match}) => <Logbook user={this.props.user} match={match} />}
+            />
             {/* <Route exact path='/search' component={Books} /> */}
-            {/* <Route exact path='/:username'
-              render={({match}) => <Library user={this.props.user} match={match} />}
-            /> */}
           </Switch>
         </Router>
       </div>

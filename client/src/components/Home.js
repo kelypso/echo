@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div className="Home">
             <h2 className="home-greeting">Welcome to ECHO</h2>
-            <p className="tagline">ECHO is an easy-to-use platform for pilots to maintain a digital flight logbook.</p>
+            <p className="tagline">An easy, efficient flight logbook application for pilots.</p>
         </div>
     )
 }

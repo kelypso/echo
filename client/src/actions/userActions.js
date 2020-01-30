@@ -19,27 +19,26 @@ export const clearCurrentUser = () => {
 // Asynch action creators (returns dispatch fn to fetch from api)
 const api_url = "http://localhost:3001/api/v1"
 
-export const login = (user, history)=> {
-    return dispatch => {
-      return fetch(`${api_url}/login`, {
-        credentials: "include",
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(user)
+export const login = user=> {
+  return dispatch => {
+    return fetch(`${api_url}/login`, {
+      credentials: "include",
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(user)
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.error) {
+          alert(resp.error)
+        } else {
+          dispatch(setCurrentUser(resp.data))
+          //dispatch(getUserFlights())
+          //dispatch(resetLoginForm()) is this needed with local state?
+        }
       })
-        .then(resp => resp.json())
-        .then(resp => {
-            if (resp.error) {
-                alert(resp.error)
-            } else {
-                dispatch(setCurrentUser(resp.data))
-                //dispatch(getUserFlights())
-                //dispatch(resetLoginForm())
-                history.push("/flights")
-            }
-        })
         .catch(error => {return error})
-    }
+  }
 }
 
 export const signup = (user, history) => {
@@ -81,7 +80,7 @@ export const logout = () => {
 
 export const findUser = (user) => {
   return dispatch => {
-    return fetch(`${API_URL}/${user}`, {
+    return fetch(`${api_url}/${user}`, {
       method: "GET",
       credentials: "include",
       headers: {"Content-Type": "application/json"}

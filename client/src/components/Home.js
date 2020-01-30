@@ -10,7 +10,7 @@ const Home = () => {
             </span> */}
             <br/><br/>
             <h2><strong>Welcome to ECHO</strong></h2>
-            <p className="tagline">ECHO provides a simple platform where pilots can efficiently log their flights.</p><br/><br/>
+            <p className="tagline">ECHO provides an efficient platform where pilots can create a digital flight logbook.</p><br/><br/>
         </div>
     )
 }

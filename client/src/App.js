@@ -16,13 +16,13 @@ class App extends React.Component {
   }
 
   render(){
+    const {loggedIn, flights} = this.props
     return (
       <div className="App">
         <Router>
-          <NavBar user={user}/>
           <div className="app-background">
+            {loggedIn ? <NavBar /> : <Home />}
             <Switch>
-              <Route exact path='/' component={Home} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/flights' component={FlightLog} />
@@ -41,7 +41,6 @@ class App extends React.Component {
 const mapStateToProps = state => {
   return ({
     loggedIn: !!state.user,
-    user: state.user,
     flights: state.flights
   })
 }

@@ -9,6 +9,7 @@ import Signup from './components/Signup'
 import Account from './components/Account'
 import FlightLog from './containers/FlightLog'
 import FlightShow from './components/FlightShow'
+import NewFlightContainer from './containers/NewFlightContainer'
 
 class App extends React.Component {
 
@@ -31,6 +32,7 @@ class App extends React.Component {
                 const flight = flights.find(f => f.id === props.match.params.id)
                 return <FlightShow flight={flight} {...props} />
               }} />
+              <Route exact path='/flights/new' component={NewFlightContainer} />
             </Switch>
           </div>
         </Router>

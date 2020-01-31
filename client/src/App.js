@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Account from './components/Account'
-import FlightLog from './components/FlightLog'
+import FlightLog from './containers/FlightLog'
 import FlightShow from './components/FlightShow'
 
 class App extends React.Component {

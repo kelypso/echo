@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Flight from './Flight'
+import FlightCard from './FlightCard'
 
 const FlightLog = ({flights}) => {
-    const flightLog = flights.length > 0 ? flights.map(f => <Flight flight={f} key={f.id} />) : null
+    const flightLog = flights.length > 0 ? flights.map(f => <FlightCard flight={f} key={f.id} />) : null
     return (
         flightLog
     )

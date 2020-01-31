@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const Flight = ({flight}) => {
+const FlightCard = ({flight}) => {
     return (
         flight ?
-            <div className="Flight">
+            <div className="FlightCard">
                 <h2><Link className="flight-details" to={`/flights/${flight.id}`} key={flight.id}>{flight.attributes.date}</Link></h2>
                 {/* <p className="tripCategory">{trip.attributes.category}</p>
                 <p className="tripDuration">{trip.attributes.duration}</p>
@@ -14,4 +14,4 @@ const Flight = ({flight}) => {
     )
 }
 
-export default Flight
+export default FlightCard

@@ -15,6 +15,20 @@ export const addFlight = flight => {
     }
 }
 
+export const editFlight = flight => {
+    return {
+        type: "UPDATE_FLIGHT",
+        flight
+    }
+}
+
+export const destroyFlight = flightId => {
+    return {
+        type: "DELETE_FLIGHT",
+        flightId
+    }
+}
+
 export const clearFlights = () => {
     return {
         type: "CLEAR_FLIGHTS"
@@ -55,7 +69,7 @@ export const createFlight = (flightData, history) => {
                 user_id: flightData.userId
             }
         }
-        return fetch("http://localhost:3001/api/v1/flights", {
+        return fetch(`${api_url}/flights`, {
             credentials: "include",
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -69,6 +83,37 @@ export const createFlight = (flightData, history) => {
                     dispatch(addFlight(resp.data))
                     dispatch(resetFlightForm())
                     history.push(`/flights/${resp.data.id}`)
+                }
+            })
+            .catch(error => {return error})
+    }
+}
+
+export const updateFlight = (flightData, history) => {
+    return dispatch => {
+        const flightBody = {
+            flight: {
+                date: flightData.date,
+                aircraft_id: flightData.aircraft_id,
+                departure: flightData.departure,
+                arrival: flightData.arrival,
+                duration: flightData.duration,
+                user_id: flightData.userId
+            }
+        }
+        return fetch(`${api_url}/flights/${flightData.flightId}`, {
+            credentials: "include",
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(flightBody)
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                if (resp.error) {
+                    alert(resp.error)
+                } else {
+                    dispatch(editFlight(resp.data))
+                    history.push(`/flights/${resp.data.id}`) // move to comp??
                 }
             })
             .catch(error => {return error})

@@ -20,16 +20,6 @@
   min-height: 100vh;
 }
 
-/* .route-title {
-  border: solid black;
-  border-width: 3px;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 8px;
-  background-color: white;
-  opacity: 0.8;
-} */
-
 /* NAV */
 .NavBar {
   overflow: hidden;
@@ -78,34 +68,6 @@
   font-style: italic;
 }
 
-/* ///////////////////BOOKS/////////////////// */
-/* .book-list {
-  border: solid black;
-  border-width: 3px;
-  display: inline-block;
-  width: auto;
-  max-width: 800px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-bottom: 2%;
-  vertical-align: middle;
-  background-color: white;
-  opacity: 0.8;
-}
-.book-list-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 150px;
-  display: inline-block;
-  list-style-type: none;
-}
-.google-search {
-  padding: 4px;
-}
-.LibraryList {
-  padding-bottom: 1px;
-} */
-
 /* ACCOUNT */
 .account-greeting {
   font-size: 21px;
@@ -139,5 +101,68 @@
 
 /* LOGBOOK */
 .FlightCard {
-  background-color: #d5eee8;
+  float: left;
+  width: 300px;
+  height: 85px;
+  margin: 10px;
+  line-height: 5px;
+  border-radius: 8px;
+  border: solid 3px #636363;
+  position: relative;
+  top: 30px;
+  left: 50px;
+  background-color: #ffffff;
+  opacity: 0.75;
+  color: #636363;
 }
+
+.card-link {
+  position: absolute;
+  left: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #129da1;
+}
+
+.card-details {
+  font-weight: bold;
+  position: relative;
+  left: 60px;
+  top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-link:hover, .selected {
+  color: #63636398;
+  opacity: 0.8;
+  border-radius: 12px;
+}
+
+/* ///////////////////BOOKS/////////////////// */
+/* .book-list {
+  border: solid black;
+  border-width: 3px;
+  display: inline-block;
+  width: auto;
+  max-width: 800px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 2%;
+  vertical-align: middle;
+  background-color: white;
+  opacity: 0.8;
+}
+.book-list-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  display: inline-block;
+  list-style-type: none;
+}
+.google-search {
+  padding: 4px;
+}
+.LibraryList {
+  padding-bottom: 1px;
+} */

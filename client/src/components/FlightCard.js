@@ -5,10 +5,10 @@ const FlightCard = ({flight}) => {
     return (
         flight ?
             <div className="FlightCard">
-                <h2><Link className="flight-details" to={`/flights/${flight.id}`} key={flight.id}>{flight.attributes.date}</Link></h2>
-                {/* <p className="tripCategory">{trip.attributes.category}</p>
-                <p className="tripDuration">{trip.attributes.duration}</p>
-                <Link to={`/trips/${trip.id}/edit`} className="nav userLink">Edit</Link> */}
+                <h3><Link to={`/flights/${flight.id}`} className="card-link card-date" activeClassName="selected" key={flight.id}>{flight.attributes.date}</Link></h3>
+                <p className="card-details">{flight.attributes.departure} - {flight.attributes.arrival}</p>
+                <p className="card-details">{flight.attributes.aircraft} / {flight.attributes.aircraft_id}</p>
+                <Link to={`/flights/${flight.id}/edit`} className="card-link card-edit" activeClassName="selected">Edit</Link>
             </div> :
         <p>Flight could not be found.</p>
     )

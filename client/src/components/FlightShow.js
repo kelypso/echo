@@ -14,7 +14,7 @@ const FlightShow = ({flight}) => {
                 <p className="flight-details">{flight.attributes.ground} hrs ground training</p>
                 <p className="flight-details">{flight.attributes.remarks}</p>
             </div> :
-        <p>Flight could not be found</p>
+        <p>Flight could not be found.</p>
     )
 }
 

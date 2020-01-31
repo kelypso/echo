@@ -20,8 +20,8 @@ const Login = ({loginData, updateLoginForm, login, history}) => {
     return (
         <form onSubmit={handleSubmit}>
             <h2 className="account-greeting">Log In</h2><br/>
-            <input type="text" name="username" onChange={handleChange} value={username} placeholder="Username" className="account-form" /><br/><br/>
-            <input type="password" name="password" onChange={handleChange} value={password} placeholder="Password" className="account-form" /><br/>
+            <input type="text" name="username" onChange={handleChange} value={username} placeholder="Username" className="form" /><br/><br/>
+            <input type="password" name="password" onChange={handleChange} value={password} placeholder="Password" className="form" /><br/>
             <br/><input type="submit" value="Log In" className="form-button" />
         </form>
     )

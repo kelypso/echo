@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import {BrowserRouter as Router, Route, Switch, withRouter} from "react-router-dom"
 import {connect} from 'react-redux'
-import {getCurrentUser} from './actions/userActions.js'
+import {findUser} from './actions/userActions.js'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
@@ -12,7 +12,7 @@ import FlightLog from './components/FlightLog'
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.getCurrentUser()
+    this.props.findUser()
   }
 
   render(){
@@ -45,5 +45,5 @@ const mapStateToProps = state => {
   })
 }
 
-export default withRouter(connect(mapStateToProps, {getCurrentUser})(App))
+export default withRouter(connect(mapStateToProps, {findUser})(App))
 

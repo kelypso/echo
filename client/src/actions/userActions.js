@@ -76,3 +76,24 @@ export const signup = user => {
       .catch(error => {return error})
   }
 }
+
+export const getCurrentUser = () => {
+  return dispatch => {
+    return fetch(`${api_url}/get_current_user`, {
+      credentials: "include",
+      method: "GET",
+      headers: {"Content-Type": "application/json"}
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.error) {
+          alert(resp.error)
+        } else {
+          dispatch(setCurrentUser(resp.data))
+          // dispatch(getUserFlights())
+          // dispatch(resetLoginForm())
+        }
+      })
+      .catch(error => {return error})
+  }
+}

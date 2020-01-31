@@ -133,7 +133,7 @@
   text-decoration: none;
 }
 
-.card-link:hover, .selected {
+.card-link:hover {
   color: #63636398;
   opacity: 0.8;
   border-radius: 12px;

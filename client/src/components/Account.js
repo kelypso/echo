@@ -3,10 +3,10 @@ import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom'
 import Logout from './Logout.js'
 
-const NavBar = ({user}) => {
+const Account = ({user}) => {
     return (
-        <div className="NavBar">
-          <>
+        <div className="Account">
+          <div className="NavBar">
             <NavLink to={"/flights"} className="nav-link" activeClassName="selected-tab">
               <span className="link-title">Logbook</span>
             </NavLink>
@@ -14,16 +14,17 @@ const NavBar = ({user}) => {
               <span className="link-title">Log New Flight</span>
             </NavLink>
             <Logout />
-          </>
-          <h2 className="account-greeting"><strong>{user.attributes.name}'s Logbook</strong></h2>
+          </div>
+          <br/><br/>
+          <h2 className="account-greeting">{user.attributes.name}'s Logbook</h2>
         </div>
     )
 }
 
 const mapStateToProps = ({user}) => {
     return {
-      user,
+      user
     }
 }
 
-export default connect(mapStateToProps)(NavBar)
+export default connect(mapStateToProps)(Account)

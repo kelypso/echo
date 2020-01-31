@@ -13,18 +13,19 @@ class Api::V1::SessionsController < ApplicationController
 
     def find
         if logged_in? 
-            render json: UserSerializer.new(current_user)
+          render json: current_user
+          # render json: UserSerializer.new(current_user)
         else
-            render json: {
-              error: "User not logged in"
-            }
+          render json: {
+            error: "User not logged in"
+          }
         end
     end
 
     def destroy 
-        session.clear
-        render json: {
-            notice: "Successfully logged out"
-        }, status: :ok
+      session.clear
+      render json: {
+          notice: "Successfully logged out"
+      }, status: :ok
     end
 end

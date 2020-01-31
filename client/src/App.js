@@ -2,11 +2,11 @@ import React from 'react'
 import './App.css'
 import {BrowserRouter as Router, Route, Switch, withRouter} from "react-router-dom"
 import {connect} from 'react-redux'
-import {findUser} from './actions/userActions.js'
+import {findUser} from './actions/userActions'
 import Home from './components/Home'
-import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import Account from './components/Account'
 import FlightLog from './components/FlightLog'
 
 class App extends React.Component {
@@ -21,7 +21,7 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <div className="app-background">
-            {loggedIn ? <NavBar /> : <Home />}
+            {loggedIn ? <Account /> : <Home />}
             <Switch>
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />

@@ -34,7 +34,7 @@ export const getUserFlights = () => {
                 if (resp.error) {
                     alert(resp.error)
                 } else {
-                    dispatch(setUserFlights(resp))
+                    dispatch(setUserFlights(resp.data))
                 }
             })
             .catch(error => {return error})

@@ -28,11 +28,12 @@ class App extends React.Component {
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/flights' component={FlightLog} />
+              <Route exact path='/flights/new' component={NewFlightContainer} />
               <Route exact path='/flights/:id' render={props => {
                 const flight = flights.find(f => f.id === props.match.params.id)
                 return <FlightShow flight={flight} {...props} />
               }} />
-              <Route exact path='/flights/new' component={NewFlightContainer} />
+              
             </Switch>
           </div>
         </Router>

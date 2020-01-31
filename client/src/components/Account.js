@@ -7,10 +7,10 @@ const Account = ({user}) => {
     return (
         <div className="Account">
           <div className="NavBar">
-            <NavLink to={"/flights"} className="nav-link" activeClassName="selected-tab">
+            <NavLink exact to={"/flights"} className="nav-link" activeClassName="selected-tab">
               <span className="link-title">Logbook</span>
             </NavLink>
-            <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
+            <NavLink exact to={"/flights/new"} className="nav-link" activeClassName="selected-tab">
               <span className="link-title">Log New Flight</span>
             </NavLink>
             <Logout />

@@ -77,9 +77,9 @@ export const signup = user => {
   }
 }
 
-export const getCurrentUser = () => {
+export const findUser = () => {
   return dispatch => {
-    return fetch(`${api_url}/get_current_user`, {
+    return fetch(`${api_url}/find_user`, {
       credentials: "include",
       method: "GET",
       headers: {"Content-Type": "application/json"}

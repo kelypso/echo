@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import {BrowserRouter as Router, Route, Switch, withRouter} from "react-router-dom"
 import {connect} from 'react-redux'
-import {getCurrentUser} from './actions/userActions'
+import {findUser} from './actions/userActions'
 import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
@@ -12,11 +12,11 @@ import FlightLog from './components/FlightLog'
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.getCurrentUser()
+    this.props.findUser()
   }
 
   render(){
-    const {loggedIn} = this.props
+    const {loggedIn, flights} = this.props
     return (
       <div className="App">
         <Router>
@@ -45,5 +45,5 @@ const mapStateToProps = state => {
   })
 }
 
-export default withRouter(connect(mapStateToProps, {getCurrentUser})(App))
+export default withRouter(connect(mapStateToProps, {findUser})(App))
 

@@ -11,7 +11,7 @@ class Api::V1::SessionsController < ApplicationController
     end
   end
 
-  def get_current_user
+  def find_user
     if logged_in? 
         render json: UserSerializer.new(current_user)
     else

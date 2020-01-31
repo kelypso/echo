@@ -11,15 +11,15 @@ import FlightLog from './components/FlightLog'
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   this.props.getCurrentUser()
-  // }
+  componentDidMount() {
+    this.props.getCurrentUser()
+  }
 
   render(){
     return (
       <div className="App">
         <Router>
-          <NavBar user={this.props.user}/>
+          <NavBar user={user}/>
           <div className="app-background">
             <Switch>
               <Route exact path='/' component={Home} />

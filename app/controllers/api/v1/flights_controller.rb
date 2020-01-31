@@ -3,8 +3,14 @@ class Api::V1::FlightsController < ApplicationController
     
     # GET /flights
     def index
-        @flights = Flight.all
-        render json: FlightSerializer.new(@flights)
+        if logged_in?
+            @flights = current_user.flights
+            render json: @flights
+        else 
+            render json: {
+                error: "Must be logged in to view flight log"
+            }
+        end
     end
     
     # GET /flights/1
@@ -15,9 +21,8 @@ class Api::V1::FlightsController < ApplicationController
     
     # POST /flights
     def create
-        @flight = Flight.new(user_params)
+        @flight = current_user.flights.build(flight_params)
         if @flight.save
-            session[:user_id] = @flight.id
             render json: FlightSerializer.new(@flight), status: :created
         else
             resp = {
@@ -45,7 +50,7 @@ class Api::V1::FlightsController < ApplicationController
             render json:  {message: "Flight successfully destroyed"}, status: :ok
         else
             resp = {
-                error: "Flight not found and not destroyed"
+                error: "Flight could not be found and was not destroyed"
             }
             render json: resp, status: :unprocessable_entity
         end
@@ -58,7 +63,7 @@ class Api::V1::FlightsController < ApplicationController
     end
     
     # Only allow a trusted parameter "white list" through.
-    def user_params
-        params.require(:flight).permit(:name, :email, :username, :password)
+    def flight_params
+        params.require(:flight).permit(:date, :aircraft, :aircraft_id, :departure, :arrival, :classification, :position, :duration, :conditions, :ground, :landings, :remarks)
     end
 end

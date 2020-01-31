@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {updateFlightForm} from '../actions/flightActions.js'
+import {updateFlightForm} from '../actions/flightActions'
 
 const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMode}) => {
     const {date, aircraft, aircraft_id, departure, arrival, classification, position, 

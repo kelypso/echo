@@ -99,6 +99,21 @@
   color: #636363;
 }
 
+.form-select {
+  font-size: 16px;
+  height: 35px;
+  width: 230px;
+  border: solid #636363;
+  border-width: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  opacity: 0.7;
+  color: #636363;
+}
+
 .form-text {
   font-size: 16px;
   border: solid #636363;

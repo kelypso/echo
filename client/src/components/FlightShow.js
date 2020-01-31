@@ -4,15 +4,16 @@ const FlightShow = ({flight}) => {
     return (
         flight ?
             <div className="FlightShow">
-                <h2>{flight.attributes.date}</h2>
-                <p className="flight-details main">{flight.attributes.departure} - {flight.attributes.arrival}</p>
-                <p className="flight-details main">{flight.attributes.aircraft} / {flight.attributes.aircraft_id}</p>
-                <p className="flight-details italic">{flight.attributes.classification} / {flight.attributes.position}</p>
-                <p className="flight-details">{flight.attributes.aircraft} / {flight.attributes.aircraft_id}</p>
-                <p className="flight-details">{flight.attributes.duration} hrs in {flight.attributes.conditions} conditions</p>
-                <p className="flight-details">{flight.attributes.landings} landing(s)</p>
-                <p className="flight-details">{flight.attributes.ground} hrs ground training</p>
-                <p className="flight-details">{flight.attributes.remarks}</p>
+                <h2 className="flight-date">{flight.attributes.date}</h2>
+                <p className="flight-details"><span className="show-label">ROUTE: </span>{flight.attributes.departure} - {flight.attributes.arrival}</p>
+                <p className="flight-details"><span className="show-label">AIRCRAFT: </span>{flight.attributes.aircraft} No. {flight.attributes.aircraft_id}</p>
+                <p className="flight-details"><span className="show-label">CATEGORY / CLASS: </span>{flight.attributes.classification}</p>
+                <p className="flight-details"><span className="show-label">PILOT TYPE: </span>{flight.attributes.position}</p>
+                <p className="flight-details"><span className="show-label">FLIGHT DURATION: </span>{flight.attributes.duration} hrs</p>
+                <p className="flight-details"><span className="show-label">CONDITIONS: </span>{flight.attributes.conditions}</p>
+                <p className="flight-details"><span className="show-label">LANDINGS / TYPE: </span>{flight.attributes.landings} landing(s)</p>
+                <p className="flight-details"><span className="show-label">GROUND TRAINING: </span>{flight.attributes.ground} hrs ground training</p>
+                <p className="flight-details"><span className="show-label">REMARKS: </span>{flight.attributes.remarks}</p>
             </div> :
         <p>Flight could not be found.</p>
     )

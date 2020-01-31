@@ -18,16 +18,34 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
                 handleSubmit(flightData)
             }}>
             <input type="date" name="date" onChange={handleChange} value={date} className="form" /><br/><br/>
-            <input type="text" name="aircraft" onChange={handleChange} value={aircraft} placeholder="Aircraft" className="form" /><br/><br/>
+            <input type="text" name="aircraft" onChange={handleChange} value={aircraft} placeholder="Aircraft Model" className="form" /><br/><br/>
             <input type="text" name="aircraft_id" onChange={handleChange} value={aircraft_id} placeholder="Aircraft ID" className="form" /><br/><br/>
             <input type="text" name="departure" onChange={handleChange} value={departure} placeholder="Departure" className="form" /><br/><br/>
             <input type="text" name="arrival" onChange={handleChange} value={arrival} placeholder="Arrival" className="form" /><br/><br/>
-            <input type="text" name="classification" onChange={handleChange} value={classification} placeholder="Aircraft Class" className="form" /><br/><br/>
-            <input type="text" name="position" onChange={handleChange} value={position} placeholder="Piloting Type" className="form" /><br/><br/>
+            <select name="classification" onChange={handleChange} value={classification} className="form-select">
+                <option value={classification}>Airplane single-engine land</option>
+                <option value={classification}>Airplane multi-engine land</option>
+                <option value={classification}>Airplane single-engine sea</option>
+                <option value={classification}>Airplane multi-engine sea</option>
+                <option value={classification}>Rotorcraft helicopter</option>
+                <option value={classification}>Rotorcraft gyroplane</option>
+            </select><br/><br/>
+            <select name="position" onChange={handleChange} value={position} className="form-select">
+                <option value={position}>Dual</option>
+                <option value={position}>Pilot-in-Command</option>
+                <option value={position}>Second-in-Command</option>
+                <option value={position}>Flight Instructor</option>
+            </select><br/><br/>
             <input type="text" name="duration" onChange={handleChange} value={duration} placeholder="Flight Duration" className="form" /><br/><br/>
-            <input type="text" name="conditions" onChange={handleChange} value={conditions} placeholder="Conditions" className="form" /><br/><br/>
+            <select name="conditions" onChange={handleChange} value={conditions} className="form-select">
+                <option value={conditions}>Day</option>
+                <option value={conditions}>Night</option>
+                <option value={conditions}>Cross-Country</option>
+                <option value={conditions}>Actual Instrument</option>
+                <option value={conditions}>Simulated Instrument</option>
+            </select><br/><br/>
             <input type="text" name="ground" onChange={handleChange} value={ground} placeholder="Ground Training" className="form" /><br/><br/>
-            <input type="text" name="landings" onChange={handleChange} value={landings} placeholder="No. Landings & Type" className="form" /><br/><br/>
+            <input type="text" name="landings" onChange={handleChange} value={landings} placeholder="No. Landings Day / Night" className="form" /><br/><br/>
             <textarea rows="5" cols="25" name="remarks" onChange={handleChange} value={remarks} placeholder="Remarks" className="form-text" /><br/>
             <br/><input type="submit" value={editMode ? "Edit Flight" : "Add Flight"} className="form-button" />
         </form>

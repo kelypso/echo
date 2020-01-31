@@ -33,7 +33,7 @@ export const login = user => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          dispatch(getUserFlights())
+          //dispatch(getUserFlights())
           dispatch(resetLoginForm())
         }
       })
@@ -76,44 +76,3 @@ export const signup = user => {
       .catch(error => {return error})
   }
 }
-
-export const findUser = () => {
-  return dispatch => {
-    return fetch(`${api_url}/find_user`, {
-      credentials: "include",
-      method: "GET",
-      headers: {"Content-Type": "application/json"}
-    })
-      .then(resp => resp.json())
-      .then(resp => {
-        if (resp.error) {
-          alert(resp.error)
-        } else {
-          dispatch(setCurrentUser(resp.data))
-          // dispatch(getUserFlights())
-          // dispatch(resetLoginForm())
-        }
-      })
-      .catch(error => {return error})
-  }
-}
-
-// export const findUser = () => {
-//   return dispatch => {
-//     return fetch(`${api_url}/find_user`, {
-//       credentials: "include",
-//       method: "GET",
-//       headers: {"Content-Type": "application/json"}
-//     })
-//       .then(resp => resp.json())
-//       .then(resp => {
-//         if (resp.error) {
-//           alert(resp.error)
-//         } else {
-//           dispatch(setCurrentUser(resp.data))
-//           //dispatch(getUserFlights())
-//         }
-//       })
-//       .catch(error => {return error})
-//   }
-// }

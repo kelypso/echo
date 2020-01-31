@@ -1,48 +1,29 @@
-import React, {Component} from 'react'
-import {NavLink} from "react-router-dom"
-import Logout from './Logout'
+import React from 'react'
+import {connect} from 'react-redux'
+import {NavLink} from 'react-router-dom'
+import Logout from './Logout.js'
 
-class NavBar extends Component {
-
-  render() {
-    let userNav
-    let user = this.props.user
-
-    if (user !== null && user.id) {
-      userNav = (
-        <>
-          <NavLink to={"/flights"} className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Logbook</span>
-          </NavLink>
-          <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Log New Flight</span>
-          </NavLink>
-          <Logout />
-        </>
-      )
-    } else {
-      userNav = (
-        <>
-          <NavLink exact to="/" className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Home</span>
-          </NavLink>
-          <NavLink to="/signup" className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Sign Up</span>
-          </NavLink>
-          <NavLink to="/login" className="nav-link" activeClassName="selected-tab">
-            <span className="link-title">Log In</span>
-          </NavLink>
-        </>
-      )
-    }
-
-    return(
-      <div className="NavBar">
-        {userNav}
-      </div>
+const NavBar = ({user}) => {
+    return (
+        <div className="NavBar">
+          <>
+            <NavLink to={"/flights"} className="nav-link" activeClassName="selected-tab">
+              <span className="link-title">Logbook</span>
+            </NavLink>
+            <NavLink to={"/" + user.username} className="nav-link" activeClassName="selected-tab">
+              <span className="link-title">Log New Flight</span>
+            </NavLink>
+            <Logout />
+          </>
+          <h2 className="account-greeting"><strong>{user.attributes.name}'s Logbook</strong></h2>
+        </div>
     )
-  }
-
 }
 
-export default NavBar
+const mapStateToProps = ({user}) => {
+    return {
+      user,
+    }
+}
+
+export default connect(mapStateToProps)(NavBar)

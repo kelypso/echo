@@ -8,6 +8,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Account from './components/Account'
 import FlightLog from './components/FlightLog'
+import FlightShow from './components/FlightShow'
 
 class App extends React.Component {
 
@@ -26,10 +27,10 @@ class App extends React.Component {
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/flights' component={FlightLog} />
-              {/* <Route exact path='/:username'
-                render={({match}) => <Logbook user={this.props.user} match={match} />}
-              /> */}
-              {/* <Route exact path='/search' component={Books} /> */}
+              <Route exact path='/flights/:id' render={props => {
+                const flight = flights.find(f => f.id === props.match.params.id)
+                return <FlightShow flight={flight} {...props} />
+              }} />
             </Switch>
           </div>
         </Router>
@@ -41,7 +42,7 @@ class App extends React.Component {
 const mapStateToProps = state => {
   return ({
     loggedIn: !!state.user,
-    //flights: state.flights
+    flights: state.flights
   })
 }
 

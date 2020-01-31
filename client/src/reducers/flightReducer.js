@@ -6,13 +6,6 @@ export default (state=initialState, action) => {
             return action.flights
         case "ADD_FLIGHT":
             return state.concat(action.flight)
-        case "UPDATE_FLIGHT_FORM":
-            return {
-                ...state,
-                [action.formData.name]: action.formData.value
-            }
-        case "RESET_FLIGHT_FORM":
-            return initialState
         case "CLEAR_FLIGHTS":
             return initialState
         case "UPDATE_FLIGHT":

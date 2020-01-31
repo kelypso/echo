@@ -14,8 +14,10 @@ export const resetFlightForm = () => {
 
 export const setEditFlightForm = flight => {
     const formData = {
-        name: flight.attributes.name,
-        category: flight.attributes.category,
+        date: flight.attributes.date,
+        aircraft_id: flight.attributes.aircraft_id,
+        departure: flight.attributes.departure,
+        arrival: flight.attributes.arrival,
         duration: flight.attributes.duration
     }
     return {

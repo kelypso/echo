@@ -1,3 +1,5 @@
+import {resetFlightForm} from './flightFormActions'
+
 // Synchronous action creators 
 export const setUserFlights = flights => {
     return {
@@ -10,19 +12,6 @@ export const addFlight = flight => {
     return {
         type: "ADD_FLIGHT",
         flight
-    }
-}
-
-export const updateFlightForm = (name, value) => {
-    return {
-        type: "UPDATE_FLIGHT_FORM",
-        formData: {name, value}
-    }
-}
-
-export const resetFlightForm = () => {
-    return {
-        type: "RESET_FLIGHT_FORM"
     }
 }
 
@@ -59,17 +48,10 @@ export const createFlight = (flightData, history) => {
         const flightBody = {
             flight: {
                 date: flightData.date,
-                aircraft: flightData.aircraft,
                 aircraft_id: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
-                classification: flightData.classification,
-                position: flightData.position,
                 duration: flightData.duration,
-                conditions: flightData.conditions,
-                ground: flightData.ground,
-                landings: flightData.landings,
-                remarks: flightData.remarks,
                 user_id: flightData.userId
             }
         }

@@ -17,7 +17,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
                 e.preventDefault()
                 handleSubmit(flightData)
             }}>
-            <input type="date" name="name" onChange={handleChange} value={date} placeholder="date" className="form-input" /><br/><br/>
+            <input type="date" name="date" onChange={handleChange} value={date} placeholder="date" className="form-input" /><br/><br/>
             <input type="text" name="aircraft" onChange={handleChange} value={aircraft} placeholder="aircraft" className="form-input" /><br/><br/>
             <input type="text" name="aircraft_id" onChange={handleChange} value={aircraft_id} placeholder="aircraft id" className="form-input" /><br/><br/>
             <input type="text" name="departure" onChange={handleChange} value={departure} placeholder="departure" className="form-input" /><br/><br/>

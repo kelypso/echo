@@ -5,7 +5,7 @@ class Api::V1::FlightsController < ApplicationController
     def index
         if logged_in?
             @flights = current_user.flights
-            render json: @flights
+            render json: FlightSerializer.new(@flights)
         else 
             render json: {
                 error: "Must be logged in to view flight log"

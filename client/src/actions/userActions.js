@@ -33,7 +33,7 @@ export const login = user => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          //dispatch(getUserFlights())
+          dispatch(getUserFlights())
           dispatch(resetLoginForm())
         }
       })
@@ -90,8 +90,7 @@ export const findUser = () => {
           alert(resp.error)
         } else {
           dispatch(setCurrentUser(resp.data))
-          // dispatch(getUserFlights())
-          // dispatch(resetLoginForm())
+          dispatch(getUserFlights())
         }
       })
       .catch(error => {return error})

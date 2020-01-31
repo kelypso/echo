@@ -25,18 +25,18 @@ const api_url = "http://localhost:3001/api/v1"
 export const getUserFlights = () => {
     return dispatch => {
         return fetch(`${api_url}/flights`, {
-        credentials: "include",
-        method: "GET",
-        headers: {"Content-Type": "application/json"}
-      })
-        .then(resp => resp.json())
-        .then(resp => {
-            if (resp.error) {
-                alert(resp.error)
-            } else {
-                dispatch(setUserFlights(resp.data))
-            }
+            credentials: "include",
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
         })
-        .catch(error => {return error})
+            .then(resp => resp.json())
+            .then(resp => {
+                if (resp.error) {
+                    alert(resp.error)
+                } else {
+                    dispatch(setUserFlights(resp))
+                }
+            })
+            .catch(error => {return error})
     }
 }

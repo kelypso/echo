@@ -10,6 +10,7 @@ import Account from './components/Account'
 import FlightLog from './containers/FlightLog'
 import FlightShow from './components/FlightShow'
 import NewFlight from './containers/NewFlight'
+import EditFlight from './containers/EditFlight'
 
 class App extends React.Component {
 
@@ -33,7 +34,11 @@ class App extends React.Component {
                 const flight = flights.find(f => f.id === props.match.params.id)
                 return <FlightShow flight={flight} {...props} />
               }} />
-              
+              <Route exact path='/flights/:id/edit' render={props => {
+              const flight = flights.find(f => f.id === props.match.params.id)
+              return <EditFlight flight={flight} {...props} />
+            }
+          } />
             </Switch>
           </div>
         </Router>

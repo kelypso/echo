@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {updateFlightForm} from '../actions/flightFormActions'
 
 const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMode}) => {
-    const {date, aircraft, aircraft_id, departure, arrival, classification, position, 
+    const {date, aircraft, aircraftId, departure, arrival, classification, position, 
             duration, conditions, ground, landings, remarks} = flightData
 
     const handleChange = e => {
@@ -19,7 +19,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
             }}>
             <input type="date" name="date" onChange={handleChange} value={date} className="form" /><br/><br/>
             <input type="text" name="aircraft" onChange={handleChange} value={aircraft} placeholder="Aircraft Model" className="form" />
-            <input type="text" name="aircraft_id" onChange={handleChange} value={aircraft_id} placeholder="Aircraft ID" className="form" /><br/><br/>
+            <input type="text" name="aircraftId" onChange={handleChange} value={aircraftId} placeholder="Aircraft ID" className="form" /><br/><br/>
             <input type="text" name="departure" onChange={handleChange} value={departure} placeholder="Departure" className="form" />
             <input type="text" name="arrival" onChange={handleChange} value={arrival} placeholder="Arrival" className="form" /><br/><br/>
             <select name="classification" onChange={handleChange} value={classification} className="form-select">

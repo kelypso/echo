@@ -1,11 +1,11 @@
 const initialState = {
     date: "",
-    aircraft_id: "",
     aircraft: "",
+    aircraftId: "",
     arrival: "",
     departure: "",
-    position: "",
     classification: "",
+    position: "",
     duration: "",
     conditions: "",
     ground: "",

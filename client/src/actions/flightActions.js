@@ -63,7 +63,7 @@ export const createFlight = (flightData, history) => {
             flight: {
                 date: flightData.date,
                 aircraft: flightData.aircraft,
-                aircraft_id: flightData.aircraft_id,
+                aircraftId: flightData.aircraftId,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
                 classification: flightData.classification,
@@ -102,7 +102,7 @@ export const updateFlight = (flightData, history) => {
             flight: {
                 date: flightData.date,
                 aircraft: flightData.aircraft,
-                aircraft_id: flightData.aircraft_id,
+                aircraftId: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
                 classification: flightData.classification,

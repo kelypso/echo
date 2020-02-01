@@ -49,7 +49,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
             </select><br/><br/>
             <input type="text" name="ground" onChange={handleChange} value={ground} placeholder="Ground Training" className="form" />
             <input type="text" name="landings" onChange={handleChange} value={landings} placeholder="No. Landings Day / Night" className="form" /><br/><br/>
-            <textarea rows="5" cols="50" name="remarks" onChange={handleChange} value={remarks} placeholder="Remarks" className="form-text" /><br/>
+            <textarea rows="5" cols="50" name="remarks" onChange={handleChange} value={remarks} placeholder="Remarks, Procedures, Maneuvers, Endorsements" className="form-text" /><br/>
             <br/><input type="submit" value={editMode ? "Edit Flight" : "Add Flight"} className="form-button" />
         </form>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const FlightShow = ({flight}) => {
     return (
@@ -14,7 +15,8 @@ const FlightShow = ({flight}) => {
                     <p className="flight-details"><span className="show-label">CONDITIONS: </span><br/>{flight.attributes.conditions}</p>
                     <p className="flight-details"><span className="show-label">LANDINGS / TYPE: </span><br/>{flight.attributes.landings}</p>
                     <p className="flight-details"><span className="show-label">GROUND TRAINING: </span><br/>{flight.attributes.ground} hrs</p>
-                    <p className="flight-details"><span className="show-label">REMARKS: </span><br/>{flight.attributes.remarks}</p>
+                    <p className="flight-details"><span className="show-label">REMARKS: </span><br/>{flight.attributes.remarks}</p><br/>
+                    <Link to={`/flights/${flight.id}/edit`} className="edit-link">Edit</Link>
                 </div>
             </div> :
         <p>Flight could not be found.</p>

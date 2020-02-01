@@ -177,6 +177,17 @@
   bottom: 20px;
 }
 
+.edit-link {
+  text-decoration: none;
+  color: #129da1;
+}
+
+.card-link:hover, .edit-link:hover {
+  color: #63636398;
+  opacity: 0.8;
+  border-radius: 12px;
+}
+
 .card-details {
   font-weight: bold;
   position: relative;
@@ -185,15 +196,9 @@
   text-decoration: none;
 }
 
-.card-link:hover {
-  color: #63636398;
-  opacity: 0.8;
-  border-radius: 12px;
-}
-
 .FlightShow {
   width: 600px;
-  height: 600px;
+  height: 615px;
   margin: auto;
   margin-top: 2%;
   border-radius: 8px;

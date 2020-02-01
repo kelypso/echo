@@ -32,7 +32,7 @@ class EditFlight extends React.Component {
         return (
             <div className="EditFlight">
                 <br/><br/><FlightForm editMode handleSubmit={this.handleSubmit} />
-                <p className="caution">*Deleting a flight will remove all associated info*</p> 
+                <p className="caution">*Deleting a flight will remove all associated information*</p> 
                 <button onClick={() => deleteFlight(flightId, history)} className="form-button">Delete Flight</button>
             </div>
         )

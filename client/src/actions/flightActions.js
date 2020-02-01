@@ -103,7 +103,7 @@ export const updateFlight = (flightData, history) => {
             flight: {
                 date: flightData.date,
                 aircraft: flightData.aircraft,
-                aircraftId: flightData.aircraft_id,
+                aircraft_id: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
                 classification: flightData.classification,
@@ -135,3 +135,22 @@ export const updateFlight = (flightData, history) => {
     }
 }
 
+export const deleteFlight = (flightId, history) => {
+    return dispatch => {
+        return fetch(`${api_url}/flights/${flightId}`, {
+            credentials: "include",
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"}
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                if (resp.error) {
+                    alert(resp.error)
+                } else {
+                    dispatch(destroyFlight(flightId))
+                    history.push("/flights")
+                }
+            })
+            .catch(error => {return error})
+    }   
+}

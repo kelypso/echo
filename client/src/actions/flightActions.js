@@ -62,10 +62,17 @@ export const createFlight = (flightData, history) => {
         const flightBody = {
             flight: {
                 date: flightData.date,
+                aircraft: flightData.aircraft,
                 aircraft_id: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
+                classification: flightData.classification,
+                position: flightData.position,
                 duration: flightData.duration,
+                conditions: flightData.conditions,
+                ground: flightData.ground,
+                landings: flightData.landings,
+                remarks: flightData.remarks,
                 user_id: flightData.userId
             }
         }
@@ -94,10 +101,17 @@ export const updateFlight = (flightData, history) => {
         const flightBody = {
             flight: {
                 date: flightData.date,
+                aircraft: flightData.aircraft,
                 aircraft_id: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
+                classification: flightData.classification,
+                position: flightData.position,
                 duration: flightData.duration,
+                conditions: flightData.conditions,
+                ground: flightData.ground,
+                landings: flightData.landings,
+                remarks: flightData.remarks,
                 user_id: flightData.userId
             }
         }
@@ -113,9 +127,10 @@ export const updateFlight = (flightData, history) => {
                     alert(resp.error)
                 } else {
                     dispatch(editFlight(resp.data))
-                    history.push(`/flights/${resp.data.id}`) // move to comp??
+                    history.push(`/flights/${resp.data.id}`)
                 }
             })
             .catch(error => {return error})
     }
 }
+

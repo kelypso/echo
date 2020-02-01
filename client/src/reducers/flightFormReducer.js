@@ -1,9 +1,16 @@
 const initialState = {
     date: "",
     aircraft_id: "",
-    departure: "",
+    aircraft: "",
     arrival: "",
-    duration: ""
+    departure: "",
+    position: "",
+    classification: "",
+    duration: "",
+    conditions: "",
+    ground: "",
+    landings: "",
+    remarks: ""
 }
 
 export default (state=initialState, action) => {

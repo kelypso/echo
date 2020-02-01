@@ -23,7 +23,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
             <input type="text" name="departure" onChange={handleChange} value={departure} placeholder="Departure" className="form" />
             <input type="text" name="arrival" onChange={handleChange} value={arrival} placeholder="Arrival" className="form" /><br/><br/>
             <select name="classification" onChange={handleChange} value={classification} className="form-select">
-                <option default className="select-default">Aircraft Category / Class</option>
+                <option default>-Aircraft Category / Class-</option>
                 <option>Airplane single-engine land</option>
                 <option>Airplane multi-engine land</option>
                 <option>Airplane single-engine sea</option>
@@ -32,7 +32,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
                 <option>Rotorcraft gyroplane</option>
             </select>
             <select name="position" onChange={handleChange} value={position} className="form-select">
-                <option default className="select-default">Pilot Type</option>
+                <option default>-Pilot Type-</option>
                 <option>Dual</option>
                 <option>Pilot-in-Command</option>
                 <option>Second-in-Command</option>
@@ -40,7 +40,7 @@ const FlightForm = ({flightData, userId, updateFlightForm, handleSubmit, editMod
             </select><br/><br/>
             <input type="text" name="duration" onChange={handleChange} value={duration} placeholder="Flight Duration" className="form" />
             <select name="conditions" onChange={handleChange} value={conditions} className="form-select">
-                <option default className="select-default">Conditions</option>
+                <option default>-Conditions-</option>
                 <option>Day</option>
                 <option>Night</option>
                 <option>Cross-Country</option>

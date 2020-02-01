@@ -86,6 +86,7 @@ export const createFlight = (flightData, history) => {
             .then(resp => {
                 if (resp.error) {
                     alert(resp.error)
+                    console.log('flight action erroring')
                 } else {
                     dispatch(addFlight(resp.data))
                     dispatch(resetFlightForm())

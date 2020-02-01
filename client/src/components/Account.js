@@ -11,7 +11,7 @@ const Account = ({user}) => {
               <span className="link-title">Logbook</span>
             </NavLink>
             <NavLink exact to={"/flights/new"} className="nav-link" activeClassName="selected-tab">
-              <span className="link-title">Log New Flight</span>
+              <span className="link-title">Add Flight</span>
             </NavLink>
             <Logout />
           </div>

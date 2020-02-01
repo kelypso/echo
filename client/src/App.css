@@ -129,6 +129,13 @@
   color: #636363;
 }
 
+.caution {
+  color: #636363;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 5px;
+}
+
 /* LOGBOOK */
 .FlightLog {
   width: 1000px;

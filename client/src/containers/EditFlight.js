@@ -31,9 +31,9 @@ class EditFlight extends React.Component {
         const flightId = flight ? flight.id : null
         return (
             <div className="EditFlight">
-                <br/><br/><FlightForm editMode handleSubmit={this.handleSubmit} /><br/>
+                <br/><br/><FlightForm editMode handleSubmit={this.handleSubmit} />
+                <p className="caution">*Deleting a flight will remove all associated info*</p> 
                 <button onClick={() => deleteFlight(flightId, history)} className="form-button">Delete Flight</button>
-                <p className="caution">*Deleting a flight will remove all associated entries*</p> 
             </div>
         )
     }

@@ -63,7 +63,7 @@ export const createFlight = (flightData, history) => {
             flight: {
                 date: flightData.date,
                 aircraft: flightData.aircraft,
-                aircraftId: flightData.aircraftId,
+                aircraft_id: flightData.aircraft_id,
                 departure: flightData.departure,
                 arrival: flightData.arrival,
                 classification: flightData.classification,
@@ -76,6 +76,7 @@ export const createFlight = (flightData, history) => {
                 user_id: flightData.userId
             }
         }
+        console.log(flightBody)
         return fetch(`${api_url}/flights`, {
             credentials: "include",
             method: "POST",
@@ -86,7 +87,6 @@ export const createFlight = (flightData, history) => {
             .then(resp => {
                 if (resp.error) {
                     alert(resp.error)
-                    console.log('flight action erroring')
                 } else {
                     dispatch(addFlight(resp.data))
                     dispatch(resetFlightForm())

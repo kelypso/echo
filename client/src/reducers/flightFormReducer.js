@@ -1,7 +1,7 @@
 const initialState = {
     date: "",
     aircraft: "",
-    aircraftId: "",
+    aircraft_id: "",
     arrival: "",
     departure: "",
     classification: "",

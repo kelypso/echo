@@ -7,7 +7,7 @@ const FlightShow = ({flight}) => {
                 <h2 className="flight-date">{flight.attributes.date}</h2>
                 <h3 className="flight-route">{flight.attributes.departure} - {flight.attributes.arrival}</h3>
                 <div className="show-aircraft">
-                    <p className="flight-details"><span className="show-label">AIRCRAFT: </span><br/>{flight.attributes.aircraft} #{flight.attributes.aircraft_id}</p>
+                    <p className="flight-details"><span className="show-label">AIRCRAFT: </span><br/>{flight.attributes.aircraft} #N{flight.attributes.aircraft_id}</p>
                     <p className="flight-details"><span className="show-label">CATEGORY / CLASS: </span><br/>{flight.attributes.classification}</p>
                     <p className="flight-details"><span className="show-label">PILOT TYPE: </span><br/>{flight.attributes.position}</p>
                     <p className="flight-details"><span className="show-label">FLIGHT DURATION: </span><br/>{flight.attributes.duration} hrs</p>

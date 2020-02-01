@@ -8,7 +8,7 @@ const FlightCard = ({flight}) => {
                 <h3><Link to={`/flights/${flight.id}`} className="card-link card-date" key={flight.id}>{flight.attributes.date}</Link></h3>
                 <p className="card-details">{flight.attributes.departure} - {flight.attributes.arrival}</p>
                 <p className="card-details">{flight.attributes.aircraft}</p>
-                <p className="card-details">#{flight.attributes.aircraft_id}</p>
+                <p className="card-details">#N{flight.attributes.aircraft_id}</p>
                 <Link to={`/flights/${flight.id}/edit`} className="card-link card-edit">Edit</Link>
             </div> :
         <p>Flight could not be found.</p>

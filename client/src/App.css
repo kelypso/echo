@@ -128,9 +128,14 @@
 }
 
 /* LOGBOOK */
+.FlightLog {
+  width: 1000px;
+  margin: auto;
+}
+
 .FlightCard {
   float: left;
-  width: 300px;
+  width: 280px;
   height: 85px;
   margin: 10px;
   line-height: 5px;
@@ -147,16 +152,20 @@
 .card-link {
   position: absolute;
   left: 15px;
-  text-align: center;
+  float: left; 
   text-decoration: none;
   color: #129da1;
+}
+
+.card-edit {
+  float: left;
+  bottom: 20px;
 }
 
 .card-details {
   font-weight: bold;
   position: relative;
-  left: 60px;
-  top: 10px;
+  left: 70px;
   text-align: center;
   text-decoration: none;
 }
@@ -167,16 +176,15 @@
   border-radius: 12px;
 }
 
-.flight-date, .flight-route {
-  color: #636363;
-}
-
-.show-flight {
-  display: flex;
-  align: left;
-}
-
-.flight-details {
+.FlightShow {
+  width: 600px;
+  height: 580px;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 8px;
+  border: solid 3px #636363;
+  background-color: #ffffff;
+  opacity: 0.8;
   color: #636363;
 }
 

@@ -5,7 +5,9 @@ import FlightCard from '../components/FlightCard'
 const FlightLog = ({flights}) => {
     const flightLog = flights.length > 0 ? flights.map(f => <FlightCard flight={f} key={f.id} />) : null
     return (
-        flightLog
+        <div className="FlightLog">
+            {flightLog}
+        </div> 
     )
 }
 

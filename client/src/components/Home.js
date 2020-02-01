@@ -17,7 +17,7 @@ const Home = () => {
             </span>
             <br/><br/>
             <h2 className="home-greeting">Welcome to ECHO</h2>
-            <p className="tagline">An easy, efficient flight logbook application for pilots.</p>
+            <p className="tagline">A logbook application for aviators.</p>
         </div>
     )
 }

@@ -129,6 +129,12 @@
   color: #636363;
 }
 
+.form-button {
+  font-size: 16px;
+  height: 30px;
+  color: #636363;
+}
+
 .caution {
   color: #636363;
   font-size: 12px;

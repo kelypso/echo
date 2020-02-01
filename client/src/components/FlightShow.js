@@ -5,15 +5,17 @@ const FlightShow = ({flight}) => {
         flight ?
             <div className="FlightShow">
                 <h2 className="flight-date">{flight.attributes.date}</h2>
-                <p className="flight-details"><span className="show-label">ROUTE: </span>{flight.attributes.departure} - {flight.attributes.arrival}</p>
-                <p className="flight-details"><span className="show-label">AIRCRAFT: </span>{flight.attributes.aircraft} No. {flight.attributes.aircraft_id}</p>
-                <p className="flight-details"><span className="show-label">CATEGORY / CLASS: </span>{flight.attributes.classification}</p>
-                <p className="flight-details"><span className="show-label">PILOT TYPE: </span>{flight.attributes.position}</p>
-                <p className="flight-details"><span className="show-label">FLIGHT DURATION: </span>{flight.attributes.duration} hrs</p>
-                <p className="flight-details"><span className="show-label">CONDITIONS: </span>{flight.attributes.conditions}</p>
-                <p className="flight-details"><span className="show-label">LANDINGS / TYPE: </span>{flight.attributes.landings} landing(s)</p>
-                <p className="flight-details"><span className="show-label">GROUND TRAINING: </span>{flight.attributes.ground} hrs ground training</p>
-                <p className="flight-details"><span className="show-label">REMARKS: </span>{flight.attributes.remarks}</p>
+                <h3 className="flight-route">{flight.attributes.departure} - {flight.attributes.arrival}</h3>
+                <div className="show-aircraft">
+                    <p className="flight-details"><span className="show-label">AIRCRAFT: </span><br/>{flight.attributes.aircraft} #{flight.attributes.aircraft_id}</p>
+                    <p className="flight-details"><span className="show-label">CATEGORY / CLASS: </span><br/>{flight.attributes.classification}</p>
+                    <p className="flight-details"><span className="show-label">PILOT TYPE: </span><br/>{flight.attributes.position}</p>
+                    <p className="flight-details"><span className="show-label">FLIGHT DURATION: </span><br/>{flight.attributes.duration} hrs</p>
+                    <p className="flight-details"><span className="show-label">CONDITIONS: </span><br/>{flight.attributes.conditions}</p>
+                    <p className="flight-details"><span className="show-label">LANDINGS / TYPE: </span><br/>{flight.attributes.landings}</p>
+                    <p className="flight-details"><span className="show-label">GROUND TRAINING: </span><br/>{flight.attributes.ground} hrs</p>
+                    <p className="flight-details"><span className="show-label">REMARKS: </span><br/>{flight.attributes.remarks}</p>
+                </div>
             </div> :
         <p>Flight could not be found.</p>
     )

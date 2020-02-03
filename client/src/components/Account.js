@@ -15,7 +15,7 @@ const Account = ({user}) => {
             </NavLink>
             <Logout />
           </div>
-          <br/><br/>
+          <br/>
           <h2 className="account-greeting">{user.attributes.name}'s Logbook</h2>
         </div>
     )

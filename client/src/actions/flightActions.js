@@ -76,7 +76,6 @@ export const createFlight = (flightData, history) => {
                 user_id: flightData.userId
             }
         }
-        console.log(flightBody)
         return fetch(`${api_url}/flights`, {
             credentials: "include",
             method: "POST",

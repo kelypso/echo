@@ -17,7 +17,7 @@ const Home = () => {
             </span>
             <br/><br/>
             {/* <h2 className="home-greeting">Welcome to ECHO</h2> */}
-            <img src={require('../images/logo.png')} />
+            <img src={require("../images/logo.png")} alt="ECHO" className="home-greeting" />
             <p className="tagline">A logbook application for aviators.</p>
         </div>
     )

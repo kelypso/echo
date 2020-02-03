@@ -51,15 +51,10 @@
 /* HOME */
 .home-greeting {
   font-weight: bold;
-  border: solid #636363;
-  border-width: 3px;
-  border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-top: 2%;
   padding: 12px;
-  background-color: #ffffff;
-  opacity: 0.8;
   color: #636363;
 }
 

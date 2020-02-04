@@ -1,5 +1,5 @@
-import {resetLoginForm} from './loginActions.js'
-import {resetSignupForm} from './signupActions.js'
+import {resetLoginForm} from './loginActions'
+import {resetSignupForm} from './signupActions'
 import {getUserFlights, clearFlights} from './flightActions'
 
 // Synchronous action creators (returns js obj)

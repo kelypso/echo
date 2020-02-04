@@ -19,7 +19,7 @@ export const clearCurrentUser = () => {
 // Asynch action creators (returns dispatch fn to fetch from api)
 const api_url = "http://localhost:3001/api/v1"
 
-export const login = user => {
+export const login = (user, history) => {
   return dispatch => {
     return fetch(`${api_url}/login`, {
       credentials: "include",
@@ -31,10 +31,12 @@ export const login = user => {
       .then(resp => {
         if (resp.error) {
           alert(resp.error)
+          history.push("/login")
         } else {
           dispatch(setCurrentUser(resp.data))
           dispatch(getUserFlights())
           dispatch(resetLoginForm())
+          history.push("/flights")
         }
       })
       .catch(error => {return error})
@@ -52,7 +54,7 @@ export const logout = () => {
   }
 }
 
-export const signup = user => {
+export const signup = (user, history) => {
   return dispatch => {
     const userData = {
       user
@@ -67,10 +69,12 @@ export const signup = user => {
       .then(resp => {
         if (resp.error) {
           alert(resp.error)
+          history.push("/signup")
         } else {
           dispatch(setCurrentUser(resp.data))
           dispatch(getUserFlights())
           dispatch(resetSignupForm())
+          history.push("/")
         }
       })
       .catch(error => {return error})

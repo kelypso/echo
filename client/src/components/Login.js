@@ -13,8 +13,7 @@ const Login = ({loginData, updateLoginForm, login, history}) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        login(loginData)
-        history.push("/flights")
+        login(loginData, history)
     }
 
     return (

@@ -35,8 +35,8 @@ export const login = (user, history) => {
         } else {
           dispatch(setCurrentUser(resp.data))
           dispatch(getUserFlights())
-          dispatch(resetLoginForm())
           history.push("/flights")
+          dispatch(resetLoginForm())
         }
       })
       .catch(error => {return error})
@@ -73,8 +73,8 @@ export const signup = (user, history) => {
         } else {
           dispatch(setCurrentUser(resp.data))
           dispatch(getUserFlights())
-          dispatch(resetSignupForm())
           history.push("/")
+          dispatch(resetSignupForm())
         }
       })
       .catch(error => {return error})

@@ -67,11 +67,14 @@
 /* ACCOUNT */
 .account-greeting {
   font-size: 19px;
-  position: static;
-  right: 2050px;
-  bottom: 1097px;
+  margin-top: 2%;
   opacity: 0.8;
   color: #63636398;
+}
+
+.account-logo {
+  margin-top: 1%;
+  opacity: 80%;
 }
 
 .form {

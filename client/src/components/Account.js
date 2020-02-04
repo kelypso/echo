@@ -15,7 +15,7 @@ const Account = ({user}) => {
             </NavLink>
             <Logout />
           </div>
-          <br/>
+          <img src={require("../images/logo-sm.png")} alt="ECHO" className="account-logo" />
           <h2 className="account-greeting">{user.attributes.name}'s Logbook</h2>
         </div>
     )

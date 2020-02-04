@@ -12,11 +12,11 @@ DatabaseCleaner.clean_with(:truncation)
 scout = User.create!(name: "Kelsey", email: "scout@email.com", username: "scout", password: "scout")
 roamer = User.create!(name: "Conrad", email: "roamer@email.com", username: "ranger", password: "ranger")
 
-flight_a = Flight.create!(date: "2019-09-28", aircraft: "C150M Cessna", aircraft_id: "714HH", 
+flight_a = Flight.create!(date: "2019-10-05", aircraft: "C150M Cessna", aircraft_id: "714HH", 
                         departure: "SZP", arrival: "SZP", classification: "Airplane single-engine land",
-                        position: "Dual", duration: "1.4", conditions: "Day",
+                        position: "Dual", duration: "1.3", conditions: "Day",
                         ground: "0.5", landings: "1 day", 
-                        remarks: "Climbs, turns, cleaning trim, stalls, steep turns, slow flight",                        
+                        remarks: "Climbs, turns, descents, climbing turns and descents, descent high/low drag, trim, slow flight, power off stalls",                        
                         user_id: "1")
 flight_b = Flight.create!(date: "2019-10-09", aircraft: "C150M Cessna", aircraft_id: "704UT", 
                         departure: "SZP", arrival: "SZP", classification: "Airplane single-engine land",
@@ -24,7 +24,6 @@ flight_b = Flight.create!(date: "2019-10-09", aircraft: "C150M Cessna", aircraft
                         ground: "0", landings: "1 day", 
                         remarks: "Climbs, turns, clearing turns, trim, power off stalls with rudder, steep turns, slow flight",
                         user_id: "1")
-
 flight_c = Flight.create!(date: "2019-10-11", aircraft: "C150M Cessna", aircraft_id: "714HH", 
                         departure: "SZP", arrival: "SZP", classification: "Airplane single-engine land",
                         position: "Dual", duration: "1.7", conditions: "Day",

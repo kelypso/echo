@@ -18,7 +18,7 @@ ECHO is a React app for pilots to maintain a safe and secure digital backup of t
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kelypso/echo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/helloklow/echo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -26,4 +26,4 @@ The application is available as open source under the terms of the [MIT License]
 
 ## Code of Conduct
 
-Everyone interacting in the ECHO project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/kelypso/echo/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the ECHO project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/helloklow/echo/blob/master/CODE_OF_CONDUCT.md).

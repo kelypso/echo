@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Button from './Button'
 
 const FlightShow = ({flight}) => {
     return (
@@ -18,6 +19,7 @@ const FlightShow = ({flight}) => {
                     <p className="flight-details"><span className="show-label">REMARKS: </span><br/>{flight.attributes.remarks}</p><br/>
                     <Link to={`/flights/${flight.id}/edit`} className="edit-link">Edit</Link>
                 </div>
+                {/* <Button /> */}
             </div> :
         <p>Flight could not be found.</p>
     )
